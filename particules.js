@@ -124,13 +124,13 @@ const Particules = function (id, mouseRadiusScale, nbOfParticlesScale) {
   }
 
   function make() {
-    requestAnimationFrame(make)
     ctx.clearRect(0, 0, innerWidth, innerHeight)
 
     for (let i = 0;i < particles.length; i++) {
       particles[i].update()
     }
     connect()
+    requestAnimationFrame(make)
   }
 
   init()
